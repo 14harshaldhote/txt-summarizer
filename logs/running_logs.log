@@ -174,3 +174,12 @@ Source-Age: 1
 [2023-07-27 14:44:12,247: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2023-07-27 15:10:49,560: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 15:10:49,564: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 15:10:49,566: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 15:10:49,566: INFO: common: created directory at: artifacts]
+[2023-07-27 15:10:49,566: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 15:10:49,567: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-07-27 15:10:49,809: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]

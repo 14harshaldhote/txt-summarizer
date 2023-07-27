@@ -174,3 +174,383 @@ Source-Age: 1
 [2023-07-27 14:44:12,247: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2023-07-27 15:10:49,560: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 15:10:49,564: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 15:10:49,566: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 15:10:49,566: INFO: common: created directory at: artifacts]
+[2023-07-27 15:10:49,566: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 15:10:49,567: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-07-27 15:10:49,809: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:13:24,412: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:13:24,428: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:13:24,433: INFO: common: created directory at: artifacts]
+[2023-07-27 23:13:24,435: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-27 23:29:25,052: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 23:29:25,055: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:29:25,056: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:29:25,057: INFO: common: created directory at: artifacts]
+[2023-07-27 23:29:25,057: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 23:31:56,935: ERROR: main: <urlopen error [Errno 60] Operation timed out>]
+Traceback (most recent call last):
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1451, in connect
+    super().connect()
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 945, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/main.py", line 11, in <module>
+    data_ingestion.main()
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/src/textSummarizer/components/data_ingestion.py", line 17, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 557, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 749, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
+[2023-07-27 23:33:09,476: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 23:33:09,479: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:33:09,481: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:33:09,481: INFO: common: created directory at: artifacts]
+[2023-07-27 23:33:09,482: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 23:33:20,032: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2E1A:4DAF:1C6E27:20D05D:64C2B15E
+Accept-Ranges: bytes
+Date: Thu, 27 Jul 2023 18:03:11 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4740-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1690480991.609018,VS0,VE1122
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: a346b6d14192483d9db02c111b1cba7fd68170b9
+Expires: Thu, 27 Jul 2023 18:08:11 GMT
+Source-Age: 1
+
+]
+[2023-07-27 23:33:20,215: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:33:20,215: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-07-27 23:33:20,219: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:33:20,220: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:33:20,220: INFO: common: created directory at: artifacts]
+[2023-07-27 23:33:20,221: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-27 23:33:20,223: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:37:52,877: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:37:52,882: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:37:52,902: INFO: common: created directory at: artifacts]
+[2023-07-27 23:39:58,249: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:39:58,270: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:39:58,277: INFO: common: created directory at: artifacts]
+[2023-07-27 23:39:58,279: INFO: common: created directory at: artifacts/data_transformation]
+[2023-07-27 23:55:43,210: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 23:55:43,214: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:55:43,217: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:55:43,219: INFO: common: created directory at: artifacts]
+[2023-07-27 23:55:43,219: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 23:55:43,222: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-07-27 23:55:43,426: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:55:43,426: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-07-27 23:55:43,428: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:55:43,429: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:55:43,429: INFO: common: created directory at: artifacts]
+[2023-07-27 23:55:43,429: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-27 23:55:43,432: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:55:43,432: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-07-27 23:55:43,433: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:55:43,434: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:55:43,435: INFO: common: created directory at: artifacts]
+[2023-07-27 23:55:43,436: INFO: common: created directory at: artifacts/data_transformation]
+[2023-07-27 23:55:58,005: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:56:15,410: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-27 23:56:15,414: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:56:15,416: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:56:15,416: INFO: common: created directory at: artifacts]
+[2023-07-27 23:56:15,416: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-27 23:56:21,815: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2E1A:4DAF:1C6E27:20D05D:64C2B15E
+Accept-Ranges: bytes
+Date: Thu, 27 Jul 2023 18:26:17 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4724-BOM
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1690482377.796940,VS0,VE450
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 035b38f31c561bcd8456e7712d0119c698e10a1c
+Expires: Thu, 27 Jul 2023 18:31:17 GMT
+Source-Age: 0
+
+]
+[2023-07-27 23:56:22,296: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:56:22,298: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-07-27 23:56:22,306: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:56:22,315: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:56:22,318: INFO: common: created directory at: artifacts]
+[2023-07-27 23:56:22,320: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-27 23:56:22,328: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-07-27 23:56:22,335: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-07-27 23:56:22,344: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-27 23:56:22,345: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-27 23:56:22,346: INFO: common: created directory at: artifacts]
+[2023-07-27 23:56:22,350: INFO: common: created directory at: artifacts/data_transformation]
+[2023-07-27 23:56:44,440: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:04:12,902: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:04:12,910: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:04:12,918: INFO: common: created directory at: artifacts]
+[2023-07-28 00:07:30,415: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:07:30,442: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:07:30,447: INFO: common: created directory at: artifacts]
+[2023-07-28 00:07:30,455: INFO: common: created directory at: artifacts/model_trainer]
+[2023-07-28 00:32:27,861: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:32:27,872: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:32:27,874: INFO: common: created directory at: artifacts]
+[2023-07-28 00:32:27,878: INFO: common: created directory at: artifacts/model_trainer]
+[2023-07-28 00:33:19,000: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:33:19,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:33:19,012: INFO: common: created directory at: artifacts]
+[2023-07-28 00:33:19,014: INFO: common: created directory at: artifacts/model_trainer]
+[2023-07-28 00:49:45,742: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-28 00:49:45,746: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:49:45,750: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:49:45,750: INFO: common: created directory at: artifacts]
+[2023-07-28 00:49:45,750: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-28 00:49:45,751: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-07-28 00:49:45,932: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:49:45,932: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-07-28 00:49:45,936: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:49:45,942: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:49:45,943: INFO: common: created directory at: artifacts]
+[2023-07-28 00:49:45,944: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-28 00:49:45,959: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:49:45,961: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-07-28 00:49:45,963: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:49:45,966: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:49:45,976: INFO: common: created directory at: artifacts]
+[2023-07-28 00:49:45,979: INFO: common: created directory at: artifacts/data_transformation]
+[2023-07-28 00:49:49,477: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:49:49,478: INFO: main: *******************]
+[2023-07-28 00:49:49,478: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-07-28 00:49:49,478: ERROR: main: name 'ModelTrainerTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/main.py", line 42, in <module>
+    model_trainer = ModelTrainerTrainingPipeline()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ModelTrainerTrainingPipeline' is not defined
+[2023-07-28 00:50:28,551: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-28 00:50:28,558: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:50:28,561: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:50:28,562: INFO: common: created directory at: artifacts]
+[2023-07-28 00:50:28,562: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-28 00:50:28,562: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-07-28 00:50:28,753: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:50:28,753: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-07-28 00:50:28,755: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:50:28,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:50:28,757: INFO: common: created directory at: artifacts]
+[2023-07-28 00:50:28,757: INFO: common: created directory at: artifacts/data_validation]
+[2023-07-28 00:50:28,759: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:50:28,760: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-07-28 00:50:28,762: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:50:28,763: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:50:28,763: INFO: common: created directory at: artifacts]
+[2023-07-28 00:50:28,764: INFO: common: created directory at: artifacts/data_transformation]
+[2023-07-28 00:50:32,342: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-07-28 00:50:32,342: INFO: main: *******************]
+[2023-07-28 00:50:32,342: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-07-28 00:50:32,345: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:50:32,346: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:50:32,347: INFO: common: created directory at: artifacts]
+[2023-07-28 00:50:32,347: INFO: common: created directory at: artifacts/model_trainer]
+[2023-07-28 00:52:21,376: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-28 00:52:21,409: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:52:21,414: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:52:21,436: INFO: common: created directory at: artifacts]
+[2023-07-28 00:52:21,442: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-28 00:54:10,196: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-28 00:54:10,200: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:54:10,201: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:54:10,202: INFO: common: created directory at: artifacts]
+[2023-07-28 00:54:10,202: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-28 00:56:42,046: ERROR: main: <urlopen error [Errno 60] Operation timed out>]
+Traceback (most recent call last):
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 1451, in connect
+    super().connect()
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/http/client.py", line 945, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/main.py", line 13, in <module>
+    data_ingestion.main()
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "/Users/harshalsmac/Documents/Projects/NLP/txt-summarizer/src/textSummarizer/components/data_ingestion.py", line 17, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 557, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 749, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harshalsmac/opt/anaconda3/envs/NLP/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
+[2023-07-28 00:57:15,237: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-07-28 00:57:15,245: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-28 00:57:15,246: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-28 00:57:15,246: INFO: common: created directory at: artifacts]
+[2023-07-28 00:57:15,246: INFO: common: created directory at: artifacts/data_ingestion]
